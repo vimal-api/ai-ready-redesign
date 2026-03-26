@@ -2,8 +2,8 @@
    RESET & BASE VARIABLES
 ======================= */
 :root {
-    --primary: #4f46e5;      /* Indigo 600 */
-    --primary-hover: #4338ca;/* Indigo 700 */
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
     
     --slate-50: #f8fafc;
     --slate-100: #f1f5f9;
@@ -308,6 +308,49 @@ svg.fill-current { fill: currentColor !important; }
 .hidden-desktop { display: none; }
 
 /* =======================
+   MOBILE MENU BUTTON
+======================= */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    transition: background 0.2s ease;
+}
+.menu-btn:hover {
+    background: var(--slate-100);
+}
+.menu-btn .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--slate-800);
+    border-radius: 2px;
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.25s ease,
+                width 0.25s ease;
+    transform-origin: center;
+}
+.menu-btn.menu-open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-btn.menu-open .bar:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.menu-btn.menu-open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =======================
    SECTIONS & HERO
 ======================= */
 .section {
@@ -407,12 +450,12 @@ svg.fill-current { fill: currentColor !important; }
     flex-direction: column;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
-    flex: 0 0 350px; /* Fixed width for equal cards in slider */
+    flex: 0 0 350px;
     min-height: 480px;
 }
 .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
     border-color: var(--primary);
 }
 
@@ -592,70 +635,55 @@ svg.fill-current { fill: currentColor !important; }
     .items-center-mobile { align-items: center; }
     .hidden-mobile { display: none !important; }
     .hidden-desktop { display: inline-flex; }
-    
+
     .navbar {
         border-radius: var(--radius-lg);
         margin: 10px auto;
     }
-    
+
     .hero-title { font-size: 2.5rem; }
-    
+
     .bento-card {
         flex: 0 0 280px;
     }
-    
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    
-    .menu-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: var(--slate-800);
+
+    /* Mobile Menu Active State */
+    .nav-links.active-mobile {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid #e2e8f0;
+        z-index: 100;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
     }
 
-  /* Mobile Menu Button */
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--slate-800);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    border-radius: var(--radius-md);
-    transition: background 0.2s ease;
-}
-.menu-btn:hover {
-    background: var(--slate-100);
-}
-.menu-btn .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: var(--slate-800);
-    border-radius: 2px;
-    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-                opacity 0.25s ease,
-                width 0.25s ease;
-    transform-origin: center;
-}
-/* Animate to X */
-.menu-btn.menu-open .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-.menu-btn.menu-open .bar:nth-child(2) {
-    opacity: 0;
-    width: 0;
-}
-.menu-btn.menu-open .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    .nav-actions.active-mobile {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        border-top: 1px solid #e2e8f0;
+        z-index: 99;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 /* =======================

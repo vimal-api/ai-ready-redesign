@@ -304,6 +304,14 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+       const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const navActions = document.querySelector('.nav-actions');
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active-mobile');
+    navActions.classList.toggle('active-mobile');
+});
 
         // Draggable Slider Logic
         const slider = document.getElementById('featuresSlider');

@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Ready School | The Complete AI Ecosystem for K-12</title>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +15,12 @@
     <!-- NAV BAR -->
     <nav class="navbar">
         <div class="container container-nav flex justify-between items-center">
-            
+
             <a href="#" class="logo flex items-center gap-sm">
                 <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/698c31a6b5cb37dc80e2cfbc_logo-tm.png" alt="AI Ready School" class="logo-img">
             </a>
 
-            <div class="nav-links hidden-mobile flex gap-lg">
+            <div class="nav-links flex gap-lg">
                 <div class="dropdown">
                     <a href="#" class="nav-link flex items-center gap-xs">Products <i data-lucide="chevron-down" class="icon-sm"></i></a>
                     <div class="dropdown-menu">
@@ -39,17 +36,18 @@
                 <a href="#blog" class="nav-link">Blog</a>
             </div>
 
-            <div class="nav-actions hidden-mobile flex items-center gap-md">
+            <div class="nav-actions flex items-center gap-md">
                 <a href="#" class="nav-link btn-ghost">Sign in</a>
                 <a href="#" class="btn btn-primary">Book a Demo</a>
             </div>
 
-            <!-- UPDATED: Custom animated hamburger button (no Lucide icon) -->
-            <button class="menu-btn hidden-desktop" aria-label="Toggle menu">
+            <!-- Animated hamburger — 3 bars → X -->
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
+
         </div>
     </nav>
 
@@ -57,19 +55,16 @@
     <header class="hero section">
         <div class="container hero-container text-center">
             <div class="badge badge-pill mx-auto mb-md animate-fade-in-up">
-                <i data-lucide="sparkles" class="icon-sm text-primary"></i> 
+                <i data-lucide="sparkles" class="icon-sm text-primary"></i>
                 <span>Trust by Over 10,000+ Students & Teachers</span>
             </div>
-            
             <h1 class="hero-title animate-fade-in-up delay-1">
                 A Complete AI Ecosystem<br>
                 <span class="text-gradient">for K-12 Schools</span>
             </h1>
-            
             <p class="hero-subtitle mx-auto mb-xl animate-fade-in-up delay-2" style="max-width: 42rem;">
                 Everything a school needs to lead the AI era. Personalised AI companions for students, intelligent tools that free teachers to teach, and secure, on-premise infrastructure.
             </p>
-            
             <div class="hero-buttons flex justify-center gap-md animate-fade-in-up delay-3">
                 <a href="#" class="btn btn-primary btn-pulse btn-lg flex items-center gap-sm">
                     Book a Free Demo <i data-lucide="arrow-right" class="icon-sm"></i>
@@ -82,21 +77,19 @@
     </header>
 
     <!-- ECOSYSTEM SECTION -->
-    <section id="ecosystem" class="section bg-slate-50 relative">
+    <section id="ecosystem" class="section bg-slate-50">
         <div class="container">
             <div class="section-header text-center mx-auto mb-xl">
-                <h2 class="section-title">One Unified Platform. <br>Five Transformative Pillars.</h2>
+                <h2 class="section-title">One Unified Platform.<br>Five Transformative Pillars.</h2>
                 <p class="section-subtitle">
                     Every product we build is rooted in learning science, designed to make students think deeper and teachers teach better. Our philosophy is <strong>Human First, AI Next</strong>.
                 </p>
             </div>
-
             <div class="drag-container" id="featuresSlider">
                 <div class="drag-track" id="featuresTrack">
-                
-                <!-- CYPHER -->
-                <div class="bento-card card-hover">
-                    <div class="bento-content">
+
+                    <!-- CYPHER -->
+                    <div class="bento-card card-hover">
                         <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69bd4bbbf23581c6b7b21bc1_cypher-logo.png" alt="Cypher Logo" class="product-logo">
                         <p class="bento-desc mb-md">An AI learning companion guiding students to their own answers via thoughtful questions.</p>
                         <ul class="advantage-list mb-xl">
@@ -106,11 +99,9 @@
                         </ul>
                         <a href="https://www.aireadyschool.com/cypher" target="_blank" class="bento-link mt-auto">Explore Cypher &rarr;</a>
                     </div>
-                </div>
 
-                <!-- MORPHEUS -->
-                <div class="bento-card card-hover">
-                    <div class="bento-content">
+                    <!-- MORPHEUS -->
+                    <div class="bento-card card-hover">
                         <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69bd4d75734dc85c8e7f1f23_morpheus-1.png" alt="Morpheus Logo" class="product-logo">
                         <p class="bento-desc mb-md">An AI-powered Teaching Agent acting as a co-pilot to reduce educator workload.</p>
                         <ul class="advantage-list mb-xl">
@@ -120,11 +111,9 @@
                         </ul>
                         <a href="https://www.aireadyschool.com/morpheus" target="_blank" class="bento-link mt-auto">Explore Morpheus &rarr;</a>
                     </div>
-                </div>
 
-                <!-- ZION -->
-                <div class="bento-card card-hover">
-                    <div class="bento-content">
+                    <!-- ZION -->
+                    <div class="bento-card card-hover">
                         <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69bd4de7d72b5efe1d8f10ef_zion.png" alt="Zion Logo" class="product-logo">
                         <p class="bento-desc mb-md">A single platform with 30+ AI tools designed for daily learning and creative tasks.</p>
                         <ul class="advantage-list mb-xl">
@@ -134,11 +123,9 @@
                         </ul>
                         <a href="https://www.aireadyschool.com/zion" target="_blank" class="bento-link mt-auto">Explore Zion &rarr;</a>
                     </div>
-                </div>
 
-                <!-- NEO -->
-                <div class="bento-card card-hover">
-                    <div class="bento-content">
+                    <!-- NEO -->
+                    <div class="bento-card card-hover">
                         <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/69bd4e402445702399304fb4_neo.png" alt="NEO Logo" class="product-logo">
                         <p class="bento-desc mb-md">A hands-on AI lab turning your school into a futuristic learning environment.</p>
                         <ul class="advantage-list mb-xl">
@@ -148,11 +135,9 @@
                         </ul>
                         <a href="https://www.aireadyschool.com/neo" target="_blank" class="bento-link mt-auto">Explore NEO &rarr;</a>
                     </div>
-                </div>
 
-                <!-- MATRIX -->
-                <div class="bento-card card-hover">
-                    <div class="bento-content">
+                    <!-- MATRIX -->
+                    <div class="bento-card card-hover">
                         <h3 class="bento-title product-logo" style="font-size: 2rem; font-weight: 800; line-height: 40px; color: #1e293b; margin: 0 0 20px 0;">Matrix</h3>
                         <p class="bento-desc mb-md">Local AI infrastructure securing complete campus data privacy entirely offline.</p>
                         <ul class="advantage-list mb-xl">
@@ -162,9 +147,8 @@
                         </ul>
                         <a href="https://www.aireadyschool.com/matrix" target="_blank" class="bento-link mt-auto">Explore Matrix &rarr;</a>
                     </div>
-                </div>
 
-                </div> <!-- End drag-track -->
+                </div>
             </div>
         </div>
     </section>
@@ -176,9 +160,7 @@
                 <h2 class="section-title">Loved by Educators</h2>
                 <p class="section-subtitle">See how AI Ready School is streamlining routines and making learning fun.</p>
             </div>
-
             <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="stars flex items-center text-yellow-500 gap-xs mb-sm">
                         <div class="flex">
@@ -194,14 +176,9 @@
                     <p class="test-body">"Lets me create personalized lesson plans with subtopics, worksheets, and anchor charts. It feels like having multiple search engines rolled into one smart teaching assistant."</p>
                     <div class="test-author mt-auto pt-md flex items-center gap-sm">
                         <div class="avatar bg-indigo-100 text-indigo-700">S</div>
-                        <div>
-                            <p class="author-name">Shraddha</p>
-                            <p class="author-role">Educator</p>
-                        </div>
+                        <div><p class="author-name">Shraddha</p><p class="author-role">Educator</p></div>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
                 <div class="testimonial-card">
                     <div class="stars flex items-center text-yellow-500 gap-xs mb-sm">
                         <div class="flex">
@@ -217,14 +194,9 @@
                     <p class="test-body">"This AI platform has exceeded my expectations. The slides presentation feature has transformed how I teach—making complex topics easier to present and understand."</p>
                     <div class="test-author mt-auto pt-md flex items-center gap-sm">
                         <div class="avatar bg-blue-100 text-blue-700">S</div>
-                        <div>
-                            <p class="author-name">Sandeep</p>
-                            <p class="author-role">Educator</p>
-                        </div>
+                        <div><p class="author-name">Sandeep</p><p class="author-role">Educator</p></div>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
                 <div class="testimonial-card">
                     <div class="stars flex items-center text-yellow-500 gap-xs mb-sm">
                         <div class="flex">
@@ -240,10 +212,7 @@
                     <p class="test-body">"I really enjoyed learning algebra and found the concepts easy to understand. This website made learning fun and engaging, grasping topics effortlessly."</p>
                     <div class="test-author mt-auto pt-md flex items-center gap-sm">
                         <div class="avatar bg-purple-100 text-purple-700">K</div>
-                        <div>
-                            <p class="author-name">Kinaisha</p>
-                            <p class="author-role">Student</p>
-                        </div>
+                        <div><p class="author-name">Kinaisha</p><p class="author-role">Student</p></div>
                     </div>
                 </div>
             </div>
@@ -254,17 +223,11 @@
     <footer class="bg-white border-t border-slate-200" style="padding-top: 60px; padding-bottom: 30px;">
         <div class="container">
             <div class="grid grid-cols-1 md-grid-cols-4 gap-xl mb-xxl text-center-mobile">
-                
-                <!-- Col 1 -->
                 <div class="flex flex-col items-center-mobile md-items-start gap-xs">
-                    <span class="text-xs text-slate-400 font-medium uppercase tracking-wider mb-xs">Powered By</span>
-                    <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/698c31a6b5cb37dc80e2cfbc_logo-tm.png" alt="AI Ready School Logo" class="logo-img" style="height: 38px; width: auto; object-fit: contain;">
+                    <span style="font-size:0.75rem; color:var(--slate-400); font-weight:500; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Powered By</span>
+                    <img src="https://cdn.prod.website-files.com/68c2a3af705b8af2b80faa97/698c31a6b5cb37dc80e2cfbc_logo-tm.png" alt="AI Ready School Logo" class="logo-img">
                 </div>
-                
-                <!-- Col 2: Empty Spacer -->
-                <div class="hidden-mobile md-block"></div>
-
-                <!-- Col 3: AI Ready School -->
+                <div class="md-block" style="display:none;"></div>
                 <div class="flex flex-col items-center-mobile md-items-start">
                     <h4 class="footer-heading">AI Ready School</h4>
                     <a href="https://www.aireadyschool.com/cypher" target="_blank" class="footer-link">Cypher</a>
@@ -273,11 +236,9 @@
                     <a href="https://www.aireadyschool.com/neo" target="_blank" class="footer-link">NEO</a>
                     <a href="https://www.aireadyschool.com/matrix" target="_blank" class="footer-link">Matrix</a>
                 </div>
-
-                <!-- Col 4: Follow Us -->
                 <div class="flex flex-col items-center-mobile md-items-start">
                     <h4 class="footer-heading">Follow us</h4>
-                    <div class="flex justify-center md-justify-start gap-md">
+                    <div class="flex gap-md">
                         <a href="https://www.instagram.com/aireadyschool/" target="_blank" class="footer-icon-solid">
                             <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
@@ -292,47 +253,61 @@
                         </a>
                     </div>
                 </div>
-
             </div>
-
-            <!-- Bottom Bar -->
             <div class="border-t border-slate-200 pt-lg flex flex-col md-flex-row justify-between items-center gap-md">
                 <a href="#" class="footer-link" style="margin-bottom: 0;">Privacy Policy</a>
-                <span class="text-sm text-slate-500 font-medium tracking-wide">&copy;2026: AIREADYSCHOOL.COM</span>
+                <span class="text-sm text-slate-500 font-medium">&copy;2026: AIREADYSCHOOL.COM</span>
             </div>
         </div>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile Menu Toggle
-        const menuBtn = document.querySelector('.menu-btn');
+        // Mobile Menu — touch safe
+        const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.querySelector('.nav-links');
         const navActions = document.querySelector('.nav-actions');
 
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active-mobile');
-            navActions.classList.toggle('active-mobile');
-            menuBtn.classList.toggle('menu-open');
-        });
-
-        // Close menu when clicking a nav link
-        document.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
-            link.addEventListener('click', () => {
+        function toggleMenu(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isOpen = menuBtn.classList.toggle('menu-open');
+            if (isOpen) {
+                navLinks.classList.add('active-mobile');
+                navActions.classList.add('active-mobile');
+            } else {
                 navLinks.classList.remove('active-mobile');
                 navActions.classList.remove('active-mobile');
-                menuBtn.classList.remove('menu-open');
-            });
+            }
+        }
+
+        function closeMenu() {
+            menuBtn.classList.remove('menu-open');
+            navLinks.classList.remove('active-mobile');
+            navActions.classList.remove('active-mobile');
+        }
+
+        // Works for both mouse and touch
+        menuBtn.addEventListener('click', toggleMenu);
+        menuBtn.addEventListener('touchend', toggleMenu);
+
+        // Close when tapping a nav link
+        document.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
 
-        // Draggable Slider Logic
+        // Close when tapping outside
+        document.addEventListener('touchstart', (e) => {
+            if (!e.target.closest('.navbar')) closeMenu();
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) closeMenu();
+        });
+
+        // Draggable Slider
         const slider = document.getElementById('featuresSlider');
-        
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        let isDown = false, startX, scrollLeft;
 
         slider.addEventListener('mousedown', (e) => {
             isDown = true;
@@ -340,20 +315,13 @@
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.style.cursor = 'grab';
-        });
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.style.cursor = 'grab';
-        });
+        slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+        slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
         slider.addEventListener('mousemove', (e) => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2;
-            slider.scrollLeft = scrollLeft - walk;
+            slider.scrollLeft = scrollLeft - (x - startX) * 2;
         });
     </script>
 </body>

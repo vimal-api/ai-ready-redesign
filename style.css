@@ -603,6 +603,35 @@ svg.fill-current { fill: currentColor !important; }
     }
 }
 
+/* Mobile Menu Active State */
+.nav-links.active-mobile {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 100;
+    gap: 15px;
+}
+
+.nav-actions.active-mobile {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 99;
+    gap: 10px;
+}
+
 /* =======================
    ANIMATIONS
 ======================= */

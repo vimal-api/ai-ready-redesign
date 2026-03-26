@@ -632,6 +632,10 @@ svg.fill-current { fill: currentColor !important; }
     gap: 10px;
 }
 
+/* Menu button X icon when open */
+.menu-btn.menu-open i {
+    transform: rotate(90deg);
+}
 /* =======================
    ANIMATIONS
 ======================= */

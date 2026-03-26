@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Icons -->
-    <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
@@ -17,7 +16,7 @@
 <body>
 
     <!-- NAV BAR -->
-    <nav class="navbar border-b border-light">
+    <nav class="navbar">
         <div class="container container-nav flex justify-between items-center">
             
             <a href="#" class="logo flex items-center gap-sm">
@@ -45,8 +44,11 @@
                 <a href="#" class="btn btn-primary">Book a Demo</a>
             </div>
 
-            <button class="menu-btn hidden-desktop">
-                <i data-lucide="menu"></i>
+            <!-- UPDATED: Custom animated hamburger button (no Lucide icon) -->
+            <button class="menu-btn hidden-desktop" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
         </div>
     </nav>
@@ -305,7 +307,7 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile Menu Toggle with Close
+        // Mobile Menu Toggle
         const menuBtn = document.querySelector('.menu-btn');
         const navLinks = document.querySelector('.nav-links');
         const navActions = document.querySelector('.nav-actions');
@@ -316,7 +318,7 @@
             menuBtn.classList.toggle('menu-open');
         });
 
-        // Close menu when clicking on a nav link
+        // Close menu when clicking a nav link
         document.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active-mobile');
@@ -327,7 +329,6 @@
 
         // Draggable Slider Logic
         const slider = document.getElementById('featuresSlider');
-        const track = document.getElementById('featuresTrack');
         
         let isDown = false;
         let startX;
@@ -339,22 +340,19 @@
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
-        
         slider.addEventListener('mouseleave', () => {
             isDown = false;
             slider.style.cursor = 'grab';
         });
-        
         slider.addEventListener('mouseup', () => {
             isDown = false;
             slider.style.cursor = 'grab';
         });
-        
         slider.addEventListener('mousemove', (e) => {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll speed multiplier
+            const walk = (x - startX) * 2;
             slider.scrollLeft = scrollLeft - walk;
         });
     </script>

@@ -304,14 +304,26 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-       const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-const navActions = document.querySelector('.nav-actions');
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active-mobile');
-    navActions.classList.toggle('active-mobile');
-});
+        // Mobile Menu Toggle with Close
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const navActions = document.querySelector('.nav-actions');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active-mobile');
+            navActions.classList.toggle('active-mobile');
+            menuBtn.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active-mobile');
+                navActions.classList.remove('active-mobile');
+                menuBtn.classList.remove('menu-open');
+            });
+        });
 
         // Draggable Slider Logic
         const slider = document.getElementById('featuresSlider');
